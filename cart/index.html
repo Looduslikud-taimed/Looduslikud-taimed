@@ -27,9 +27,9 @@
     <div id="wrapper">
 
         <div id="navbar">
-            <a href="about-us.html">О нас</a>
-            <a href="plants.html">Товар</a>
-            <a href="order.html"><b>Корзина</b></a>
+            <a href="../about-us">О нас</a>
+            <a href="../goods">Товар</a>
+            <a href="../cart"><b>Корзина</b></a>
         </div>
         <div id="cart">
             <h2>Корзина</h2>
@@ -1432,12 +1432,13 @@
         </div>
         <div>
             <p>Электронная почта:</p>
-            <input type="email" id="email">
-            <button id="email-verification">Проверить</button>
-            <div id="verification-code-block">
+            <input type="email" id="email-verification">
+            <button id="verify-email">Проверить</button>
+            <p id="verification-wrong-email" style="display: none">Электронная почта должна иметь "@".</p>
+            <div id="verification-code-block" style="display: none">
                 <p>Полученный код:</p>
                 <input type="number" id="verification-code">
-                <button id="code-verification">Проверить</button>
+                <button id="verify-code">Проверить</button>
             </div>
         </div>
     <footer>

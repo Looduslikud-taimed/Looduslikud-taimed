@@ -106,3 +106,14 @@ function selectTransportationDestination(ind) {
         transportation = ["Omniva",select.options[select.selectedIndex].text]
     }
 }
+
+function sendConfirmationCode() {
+    var email = document.getElementById("email-verification").value
+    if (email.includes("@")) {
+        document.getElementById("verification-code-block").display = "inline"
+        document.getElementById("verification-wrong-email").display = "none"
+    }
+    else {
+        document.getElementById("verification-wrong-email").display = "inline"
+    }
+}
