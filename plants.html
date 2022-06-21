@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Дикоросы на продажу</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="Дикоросы на продажу">
+    <meta property="og:description" content="">
+    <meta rpoperty="og:type" content="website">
+    <meta property="og:image" content="favicon.ico">
+    <meta property="og:url" content="">
+
+    <!--Load fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Space+Grotesk" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+
+    <!--Load css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="index.css">
+
+    <!--Load js-->
+    <script src="init.js"></script> 
+    <script src="script.js"></script> 
+</head>
+<body>
+    <div id="wrapper">
+
+        <div id="navbar">
+            <a href="about-us.html">О нас</a>
+            <a href="plants.html"><b>Товар</b></a>
+            <a href="order.html">Корзина</a>
+        </div>
+
+        <h1>Гравилат речной <em>(Geum rivale)</em></h1>
+
+        <img src="img/geum rivale.jpg" alt="Geum rivale" class="plant-imgs">
+
+        <h2>Описание</h2>
+        <p>Богат антиоксидантами, антимикробными и антивирусными соединениями из-за чего обладает антивоспалительными свойствами и может использоваться против высыпаний на коже. [1] Исследовался в качестве средства защищающего от нейродегенеративных заболеваний таких как болезнь Паркинсона. Способен снижать кровяное давление. [2]</p>
+
+        <h2>Использование</h2>
+        <p>Заваривается в качестве чая или используется как пряность. Имеет вкус черного чая с гвоздикой и корицей. Доведите до кипения и дайте настояться около часа (личный опыт).</p>
+
+        <h2>Цена</h2>
+        <p id="GeumRivale-price-aerial">Цветки и листья: _ евро/порцию на 1 литр напитка</p>
+        <div id="GeumRivale-incrementer-aerial" class="number-input">
+            <button onclick="subtract(this,['GeumRivale','aerial'])" class="minus"></button>
+            <input class="quantity" min="0" name="quantity" value="1" type="number">
+            <button onclick="add(this,['GeumRivale','aerial'])" class="plus"></button>
+        </div>
+        <p id="GeumRivale-price-root">Корни: _ евро/порцию на 1 литр напитка</p>
+        <div id="GeumRivale-incrementer-root" class="number-input">
+            <button onclick="subtract(this,['GeumRivale','root'])" class="minus"></button>
+            <input class="quantity" min="0" name="quantity" value="1" type="number">
+            <button onclick="add(this,['GeumRivale','root'])" class="plus"></button>
+        </div>
+
+        <h2>Источники</h2>
+        <a href="https://cyberleninka.ru/article/n/himicheskie-komponenty-geum-rivale-l-i-ih-biologicheskaya-aktivnost/pdf">[1] Орлова А. А., & Повыдыш М. Н. (2020). ХИМИЧЕСКИЕ КОМПОНЕНТЫ GEUM RIVALE L. И ИХ БИОЛОГИЧЕСКАЯ АКТИВНОСТЬ. Фармация и фармакология, 8 (2), 133-146.</a>
+        <!--english: https://www.pharmpharm.ru/jour/article/viewFile/690/611-->
+        <a href="blob:https://www.pharmpharm.ru/dbb3395d-34d4-4199-97ec-225a664fa4b9">[2] Al-Snafi, Ali. (2019). Constituents And Pharmacology of Geum urbanum - a Review. IOSR Journal Of Pharmacy 9 (5), 28-33 </a>
+        <p></p><p></p>
+
+        <h1>Манжетка обыкновенная <em>(Alchemilla vulgaris)</em></h1>
+
+        <img src="img/alchemilla vulgaris.jpg" alt="Alchemilla vulgaris" class="plant-imgs">
+
+        <h2>Описание</h2>
+        <p>Способна уменьшить объем месячных и боль во время них. [1] Снижает симптомы менопаузы. Исследуется в качестве средства для уменьшения симптомов эндометриоза. [2]</p>
+
+        <h2>Использование</h2>
+        <p>Заваривается в качестве чая. Приятный напиток с мягким чем-либо трудно сравнимым вкусом (личный опыт). </p>
+
+        <h2>Цена</h2>
+        <p id="AlchemillaVulgaris-price-aerial">Цветки и листья: 2 евро/порцию на 1 литр напитка</p>
+        <div id="AlchemillaVulgaris-incrementer-aerial" class="number-input">
+            <button onclick="subtract(this,['AlchemillaVulgaris','aerial'])" class="minus"></button>
+            <input class="quantity" min="0" name="quantity" value="1" type="number">
+            <button onclick="add(this,['AlchemillaVulgaris','aerial'])" class="plus"></button>
+        </div>
+
+        <h2>Источники</h2>
+        <a href="https://sci-hub.se/https://doi.org/10.1089/act.2009.15305">[1] Yarnell, E., & Abascal, K. (2009). Multiphasic Herbal Prescribing for Menstruating Women. Alternative and Complementary Therapies, 15(3), 126–134.</a>
+        <a href="https://link.springer.com/article/10.1007/s00404-015-3665-6">[2] Küpeli Akkol, E., Demirel, M.A., Bahadır Acıkara, O. et al. (2015) Phytochemical analyses and effects of Alchemilla mollis (Buser) Rothm. and Alchemilla persica Rothm. in rat endometriosis model. Arch Gynecol Obstet 292, 619–628 .</a>
+
+        <p></p><p></p>
+
+        <h1>Вероника дубравная <em>(Veronica chamaedrys)</em></h1>
+
+        <img src="img/veronica chamaedrys.jpg" alt="Veronica chamaedrys" class="plant-imgs">
+
+        <h2>Описание</h2>
+        <p>Исследуется в качетсве средства от воспалительных заболеваний кишечника таких как болезнь Крона и язвенный колит.</p>
+
+        <h2>Использование</h2>
+        <p>Заваривается в качестве чая.</p>
+
+        <h2>Цена</h2>
+        <p id="VeronicaChamaedrys-price-aerial">Цветки и листья: 2 евро/порцию на 1 литр напитка</p>
+        <div id="VeronicaChamaedrys-incrementer-aerial" class="number-input">
+            <button onclick="subtract(this,['VeronicaChamaedrys','aerial'])" class="minus"></button>
+            <input class="quantity" min="0" name="quantity" value="1" type="number">
+            <button onclick="add(this,['VeronicaChamaedrys','aerial'])" class="plus"></button>
+        </div>
+
+        <h2>Источники</h2>
+        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6651156/">Salehi, B., Shivaprasad Shetty, M., V Anil Kumar, N., Živković, J., Calina, D., Oana Docea, A., Emamzadeh-Yazdi, S., Sibel Kılıç, C., Goloshvili, T., Nicola, S., Pignata, G., Sharopov, F., Del Mar Contreras, M., Cho, W. C., Martins, N., & Sharifi-Rad, J. (2019). Veronica Plants-Drifting from Farm to Traditional Healing, Food Application, and Phytopharmacology. Molecules (Basel, Switzerland), 24(13), 2454.</a>
+        
+    </div>
+    <script>updateIncrementers()</script> 
+    <footer>
+        <p id="footer-text">2022 Looduslikud Taimed OÜ</p>
+    </footer>
+</body>
+</html>

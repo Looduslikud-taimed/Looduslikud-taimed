@@ -1,0 +1,225 @@
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#navbar {
+    margin: auto;
+    display: grid;
+    column-gap: 10vw;
+    grid-template-columns: auto auto auto;
+    border-bottom: 0.25vh solid;
+    padding-bottom: 2vh;
+    justify-content: center;
+}
+
+#navbar a {
+    font-size: 3vh;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 3.5vh;
+}
+
+h2 {
+    font-size: 2vh;
+}
+
+p {
+    font-size: 2vh;
+    margin-top: 0;
+}
+
+a {
+    font-size: 2vh;
+}
+
+li {
+    font-size: 2vh;
+}
+
+select {
+    font-size: 2vh;
+}
+
+option {
+    font-size: 1.5vh;
+}
+
+optgroup {
+    font-size: 1.5vh;
+}
+
+button {
+    font-size: 1.5vh;
+}
+
+.plant-imgs {
+    margin: auto;
+    width: auto;
+    height: 40vh;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#footer-text {
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 2.5vh;
+}
+
+/*-----------------------------------------------*/
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.number-input {
+    margin-top: -1vh;
+    margin-bottom: 2vh;
+    border: 0.2vh solid #ddd;
+    display: inline-flex;
+}
+
+.number-input,
+.number-input * {
+    box-sizing: border-box;
+    width: 10vh;
+}
+
+.number-input button {
+    outline:none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 3vh;
+    height: 3vh;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+}
+
+.number-input button:after {
+    display: inline-block;
+    position: absolute;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    content: '\f077';
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+.number-input button.plus:after {
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.number-input input[type=number] {
+    font-family: sans-serif;
+    max-width: 5vh;
+    padding: 0.357vh;
+    border: solid #ddd;
+    border-width: 0 0.2vh;
+    font-size: 1.5vh;
+    height: 3vh;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*-----------------------------------------------*/
+
+#cart {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+#products {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+    border-top: 0.25vh solid;
+    border-bottom: 0.25vh solid;
+}
+
+#products p {
+    margin-bottom: 1.5vh;
+    margin-top: 1.5vh;
+}
+
+#transport {
+    width: 50vh;
+}
+
+#products-price-total {
+    margin-top: 1.5vh;
+    text-align: right;
+}
+
+#dpd-pickup-point-select {
+    width: 40vh;
+    display: block;
+    margin-top: -1.5vh;
+    margin-bottom: 1.5vh;
+}
+
+#omniva-pickup-point-select {
+    width: 40vh;
+    display: block;
+    margin-top: -1.5vh;
+    margin-bottom: 1.5vh;
+}
+
+.transport-type {
+    display: grid;
+    grid-template-columns: 5vh 45vh;
+}
+
+.transport-type input {
+    margin-top: -1.75vh;
+    width: 2vh;
+}
+
+.transport-type select {
+    width: 20vh;
+}
+
+#email {
+    display: block;
+    margin-top: -1.5vh;
+    margin-bottom: 1vh;
+}
+
+#email-verification {
+    margin-bottom: 1vh;
+}
+
+#verification-code {
+    display: block;
+    margin-top: -1.5vh;
+    margin-bottom: 1vh;
+}
