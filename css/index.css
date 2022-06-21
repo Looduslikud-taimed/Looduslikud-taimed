@@ -215,8 +215,14 @@ input[type=number]::-webkit-outer-spin-button {
     width: 20vh;
 }
 
+#personal-data {
+    display: grid;
+    grid-template-columns: 20vh 20vh 20vh;
+}
+
 #personal-data input{
     margin-bottom: 1vh;
+    width: 16vh;
 }
 
 #email-for-verification {

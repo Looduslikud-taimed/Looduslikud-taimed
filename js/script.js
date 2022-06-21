@@ -60,7 +60,17 @@ function updateCart() {
                 objName.appendChild(p)
 
                 p = document.createElement("p")
-                text = document.createTextNode(productsQuantity+" portions")
+                var lastDigit = productsQuantity % 10
+                if (lastDigit ==1) {
+                    var word = "порция"
+                }
+                else if (lastDigit==2 || lastDigit==3 || lastDigit==4) {
+                    word = "порции"
+                }
+                else {
+                    word = "порций"
+                }
+                text = document.createTextNode(productsQuantity+" "+word)
                 p.appendChild(text)
                 objQuantity.appendChild(p)
 
