@@ -39,8 +39,8 @@
                 <div id="products-price"></div>
             </div>
             <p id="products-price-total"></p>
+            <script>updateCart()</script>
         </div>
-        <script>updateCart()</script>
         <div id="transport">
             <h2>Транспорт</h2>
             <div class="transport-type">
@@ -1430,17 +1430,29 @@
                 </div>
             </div>
         </div>
-        <div>
-            <p>Электронная почта:</p>
-            <input type="email" id="email-verification">
-            <button id="verify-email">Проверить</button>
+        <div id="personal-data">
+            <h2>Личные данные</h2>
+            <label>Имя:</label>
+            <input type="text" id="personal-data-name1">
+            <label>Фамилия:</label>
+            <input type="text" id="personal-data-name2">
+            <label>Адрес:</label>
+            <input type="text" id="personal-data-address">
+            <label>Телефон:</label>
+            <input type="number" id="email-for-verification">
+            <label>Электронная почта:</label>
+            <input type="email" id="email-for-verification">
+            
             <p id="verification-wrong-email" style="display: none">Электронная почта должна иметь "@".</p>
+            <button id="verify-email" onclick="sendConfirmationCode()">Проверить</button>
+            
             <div id="verification-code-block" style="display: none">
-                <p>Полученный код:</p>
+                <label>Полученный код:</label>
                 <input type="number" id="verification-code">
-                <button id="verify-code">Проверить</button>
+                <button id="verify-code" onclick="checkConfirmationCode()">Проверить</button>
             </div>
         </div>
+        <button id="submit-order" onclick="">Заказать</button>
     <footer>
         <p id="footer-text">2022 Looduslikud Taimed OÜ</p>
     </footer>

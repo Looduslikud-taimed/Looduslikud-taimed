@@ -37,6 +37,13 @@ p {
     margin-top: 0;
 }
 
+label {
+    display: block;
+    font-size: 2vh;
+    margin-top: 0;
+    margin-bottom: 0.5vh;
+}
+
 a {
     font-size: 2vh;
 }
@@ -208,18 +215,35 @@ input[type=number]::-webkit-outer-spin-button {
     width: 20vh;
 }
 
-#email {
-    display: block;
-    margin-top: -1.5vh;
+#personal-data input{
     margin-bottom: 1vh;
 }
 
-#email-verification {
-    margin-bottom: 1vh;
+#email-for-verification {
+    display: inline;
+}
+
+#verification-wrong-email {
+    color: red;
+    margin-left: 1vh;
+    font-size: 1.5vh;
+}
+
+#verify-email {
+    display: block;
 }
 
 #verification-code {
     display: block;
-    margin-top: -1.5vh;
     margin-bottom: 1vh;
+}
+
+#verify-code {
+    display: block;
+}
+
+#submit-order {
+    margin-top: 1.5vh;
+    width: 20vh;
+    margin: auto;
 }

@@ -42,14 +42,12 @@ function updateCart() {
     var objTotal = document.getElementById("products-price-total")
     var priceTotal = 0
     var ksPlants = Object.keys(price)
-    console.log(quantity["GeumRivale"]["aerial"])
     for (var i=0; i<ksPlants.length; i++) {
         var plant = ksPlants[i]
         var ksParts = Object.keys(quantity[plant])
         for (var j=0; j<ksParts.length; j++) {
             var part = ksParts[j]
             var productsQuantity = quantity[plant][part]
-            console.log(names[plant] + " (" + part + ")", productsQuantity)
             if (productsQuantity!=0) {
                 var productName = names[plant] + " (" + part + ")"
                 var productsPrice = price[plant][part]
@@ -108,12 +106,23 @@ function selectTransportationDestination(ind) {
 }
 
 function sendConfirmationCode() {
-    var email = document.getElementById("email-verification").value
+    var email = document.getElementById("email-for-verification").value
     if (email.includes("@")) {
-        document.getElementById("verification-code-block").display = "inline"
-        document.getElementById("verification-wrong-email").display = "none"
+        document.getElementById("verification-code-block").style.display = "block"
+        document.getElementById("verification-wrong-email").style.display = "none"
     }
     else {
-        document.getElementById("verification-wrong-email").display = "inline"
+        document.getElementById("verification-wrong-email").style.display = "inline"
+    }
+}
+
+function checkConfirmationCode() {
+    var email = document.getElementById("email-for-verification").value
+    if (email.includes("@")) {
+        document.getElementById("verification-code-block").style.display = "block"
+        document.getElementById("verification-wrong-email").style.display = "none"
+    }
+    else {
+        document.getElementById("verification-wrong-email").style.display = "inline"
     }
 }
