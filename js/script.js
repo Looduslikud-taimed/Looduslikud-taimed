@@ -136,3 +136,25 @@ function checkConfirmationCode() {
         document.getElementById("verification-wrong-email").style.display = "inline"
     }
 }
+
+function sendConfirmationEmail() {
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://looduslikud-taimed.000webhostapp.com/order");
+
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.setRequestHeader("Content-Type", "application/json");
+
+    xhr.onload = () => console.log(xhr.responseText);
+
+    var name = document.getElementById("personal-data-name1").value() + " " + document.getElementById("personal-data-name2").value()
+    var email = document.getElementById("personal-data-email").value()
+    var phoneNumber = document.getElementById("personal-data-phone").value()
+    var address = document.getElementById("personal-data-address").value()
+
+    let data = {
+        "name":  name,
+        "email": email,
+    };
+
+    xhr.send(data);
+}
