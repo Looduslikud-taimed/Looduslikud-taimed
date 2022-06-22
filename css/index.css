@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: hidden;
+    /*overflow: hidden;*/
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -179,7 +179,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #transport {
-    width: 50vh;
+    width: 50vw;
 }
 
 #products-price-total {
@@ -202,12 +202,13 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .transport-type {
-    display: grid;
-    grid-template-columns: 5vh 45vh;
+    display: flex;
+    flex-direction: row;
 }
 
 .transport-type input {
     margin-top: -1.75vh;
+    margin-right: 2vh;
     width: 2vh;
 }
 
@@ -218,6 +219,18 @@ input[type=number]::-webkit-outer-spin-button {
 #personal-data {
     display: grid;
     grid-template-columns: 20vh 20vh 20vh;
+}
+
+@media only screen and (max-width: 750px) {
+    #personal-data {
+        grid-template-columns: 20vh 20vh;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    #personal-data {
+        grid-template-columns: 20vh;
+    }
 }
 
 #personal-data input{
@@ -249,7 +262,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #submit-order {
-    margin-top: 1.5vh;
+    display: block;
     width: 20vh;
     margin: auto;
+    margin-top: 1.5vh;
 }
