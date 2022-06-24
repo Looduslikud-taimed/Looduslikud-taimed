@@ -146,10 +146,10 @@ function sendConfirmationEmail() {
 
     xhr.onload = () => console.log(xhr.responseText);
 
-    var name = document.getElementById("personal-data-name1").value() + " " + document.getElementById("personal-data-name2").value()
-    var email = document.getElementById("personal-data-email").value()
-    var phoneNumber = document.getElementById("personal-data-phone").value()
-    var address = document.getElementById("personal-data-address").value()
+    var name = document.getElementById("personal-data-name1").value + " " + document.getElementById("personal-data-name2").value
+    var email = document.getElementById("personal-data-email").value
+    var phoneNumber = document.getElementById("personal-data-phone").value
+    var address = document.getElementById("personal-data-address").value
 
     let data = {
         "name":  name,
