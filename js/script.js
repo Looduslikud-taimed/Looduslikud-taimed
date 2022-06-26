@@ -40,7 +40,8 @@ function updateCart() {
     var objQuantity = document.getElementById("products-quantity")
     var objPrice = document.getElementById("products-price")
     var objTotal = document.getElementById("products-price-total")
-    var priceTotal = 0
+    priceTotal = 0
+    order = []
     var ksPlants = Object.keys(price)
     for (var i=0; i<ksPlants.length; i++) {
         var plant = ksPlants[i]
@@ -49,10 +50,11 @@ function updateCart() {
             var part = ksParts[j]
             var productsQuantity = quantity[plant][part]
             if (productsQuantity!=0) {
-                var productName = names[plant] + " (" + part + ")"
+                var productName = names[plant] + " (" + names[part] + ")"
                 var productsPrice = price[plant][part]
 
                 priceTotal += productsQuantity*productsPrice
+                order.push([productName,productsQuantity,productsPrice])
 
                 var p = document.createElement("p");
                 var text = document.createTextNode(productName)
@@ -88,7 +90,7 @@ function selectTransportationType(ind) {
     if (ind==0) {
         document.getElementById("dpd-pickup-point-select").style.display = "none"
         document.getElementById("omniva-pickup-point-select").style.display = "none"
-        transportation = ["self-pickup",""]
+        transportation = ["self-pickup",document.getElementById("self-pickup-text").innerHTML.slice(0,-8)]
     }
     else if (ind==1) {
         document.getElementById("dpd-pickup-point-select").style.display = "inline"
@@ -137,24 +139,66 @@ function checkConfirmationCode() {
     }
 }
 
+function createCORSRequest(method, url) {
+    var xhr = new XMLHttpRequest();
+    if ("withCredentials" in xhr) {
+      // XHR for Chrome/Firefox/Opera/Safari.
+      xhr.open(method, url, true);
+    } else if (typeof XDomainRequest != "undefined") {
+      // XDomainRequest for IE.
+      xhr = new XDomainRequest();
+      xhr.open(method, url);
+    } else {
+      // CORS not supported.
+      xhr = null;
+    }
+    return xhr;
+}
+
+
+
+function r(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+function getOrderNumber() {
+    return "" + r(0, 9) + r(0, 9) + r(0, 9) + r(0, 9) + r(0, 9) + r(0, 9)
+}
+
+function l0(t) {
+    return ('0'+t).slice(-2)
+}
+
 function sendConfirmationEmail() {
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://looduslikud-taimed.000webhostapp.com/order");
 
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.setRequestHeader("Content-Type", "application/json");
-
-    xhr.onload = () => console.log(xhr.responseText);
-
-    var name = document.getElementById("personal-data-name1").value + " " + document.getElementById("personal-data-name2").value
+    var name1 = document.getElementById("personal-data-name1").value 
+    var name2 = document.getElementById("personal-data-name2").value
     var email = document.getElementById("personal-data-email").value
     var phoneNumber = document.getElementById("personal-data-phone").value
     var address = document.getElementById("personal-data-address").value
+    var currentdate = new Date()
+    var time = currentdate.getDate() + "."
+                    + l0(currentdate.getMonth()+1)  + "." 
+                    + currentdate.getFullYear() + " "  
+                    + l0(currentdate.getHours()) + ":"  
+                    + l0(currentdate.getMinutes())
 
     let data = {
-        "name":  name,
-        "email": email,
+        name1:  name1,
+        name2: name2,
+        email: email,
+        phoneNumber: phoneNumber,
+        address: address,
+        time: time,
+        order: order,
+        orderNumber: getOrderNumber(),
+        orderSum: priceTotal,
+        transport: [transportation[1],transportationPrice[transportation[0]]]
     };
+    console.log(data)
 
-    xhr.send(data);
+    var url = 'https://looduslikud-taimed.000webhostapp.com/order';
+    var xhr = createCORSRequest('POST', url);
+    xhr.send(JSON.stringify(data));
+    xhr.onload = () => console.log(xhr.responseText);
 }

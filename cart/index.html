@@ -45,7 +45,7 @@
             <h2>Транспорт</h2>
             <div class="transport-type">
                 <input type="radio" name="group1" onclick="selectTransportationType(0)"></input>
-                <p>Заберу сам из Кохтла-Ярве, Олеви 37-46 (0 EUR)</p>
+                <p id="self-pickup-text">Заберу сам из Кохтла-Ярве, Олеви 37-46 (0 EUR)</p>
             </div>
             <div class="transport-type">
                 <input type="radio" name="group1" onclick="selectTransportationType(1)"></input>
@@ -1446,7 +1446,7 @@
             </div>
             <div>
                 <label>Электронная почта:</label>
-                <input type="email" id="personal-data-email">
+                <input type="text" id="personal-data-email">
             </div>
             <div>
                 <label>Адрес:</label>

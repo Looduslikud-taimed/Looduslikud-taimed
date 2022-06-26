@@ -13,6 +13,11 @@ var quantity = {
 }
 
 var transportation = ["",""]
+var transportationPrice = {
+    "self-pickup": 0,
+    DPD: 3,
+    Omniva: 3.50
+}
 
 var price = {
     GeumRivale: {
@@ -27,10 +32,15 @@ var price = {
     }, 
 }
 
+var priceTotal = 0
+var order = []
+
 var names = {
     GeumRivale: "Geum rivale", 
     AlchemillaVulgaris: "Alchemilla vulgaris",
     VeronicaChamaedrys: "Veronica chamaedrys", 
+    root: "корень",
+    aerial: "листья"
 }
 
 if (localStorage.getItem('quantity')!=null && localStorage.getItem('quantity')!=undefined) {
