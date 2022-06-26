@@ -193,7 +193,8 @@ function sendConfirmationEmail() {
         order: order,
         orderNumber: getOrderNumber(),
         orderSum: priceTotal,
-        transport: [transportation[1],transportationPrice[transportation[0]]]
+        transport: [transportation[1],transportationPrice[transportation[0]]],
+        language: language
     };
     console.log(data)
 
