@@ -35,6 +35,8 @@ var price = {
 var language = "RUS"
 var priceTotal = 0
 var order = []
+var orderReceipt = []
+var orderError = []
 
 var names = {
     GeumRivale: "Geum rivale", 

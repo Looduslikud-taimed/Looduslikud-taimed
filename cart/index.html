@@ -17,11 +17,11 @@
 
     <!--Load css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../.css/index.css">
 
     <!--Load js-->
-    <script src="../js/init.js"></script> 
-    <script src="../js/script.js"></script> 
+    <script src="../.js/init.js"></script> 
+    <script src="../.js/script.js"></script> 
 </head>
 <body>
     <div id="wrapper">
@@ -44,7 +44,7 @@
         <div id="transport">
             <h2>Транспорт</h2>
             <div class="transport-type">
-                <input type="radio" name="group1" onclick="selectTransportationType(0)"></input>
+                <input id="self-pickup" type="radio" name="group1" onclick="selectTransportationType(0)"></input>
                 <p id="self-pickup-text">Заберу сам из Кохтла-Ярве, Олеви 37-46 (0 EUR)</p>
             </div>
             <div class="transport-type">
@@ -1463,7 +1463,9 @@
         </div>
         <button id="submit-order" onclick="sendConfirmationEmail()">Заказать</button>
     <footer>
+        <hr id="footer-hr">
         <p id="footer-text">2022 Looduslikud Taimed OÜ</p>
+        <p id="footer-contact">Контакт: <a href = "mailto: a_ill@outlook.com">a_ill@outlook.com</a></p>
     </footer>
 </body>
 </html>

@@ -35,6 +35,7 @@ h2 {
 p {
     font-size: 2vh;
     margin-top: 0;
+    margin-bottom: 2vh;
 }
 
 label {
@@ -53,7 +54,8 @@ li {
 }
 
 select {
-    font-size: 2vh;
+    font-size: 1.5vh;
+    height: 2.75vh;
 }
 
 option {
@@ -84,9 +86,20 @@ footer {
     margin-right: 10%;
 }
 
+#footer-hr {
+    margin-top: 5vh;
+    width: 80vw;
+    border: 0.2vh black solid
+}
+
 #footer-text {
     margin: auto;
-    margin-top: 5vh;
+    margin-top: 1vh;
+    margin-bottom: 0.5vh;
+}
+
+#footer-contact {
+    margin: auto;
     margin-bottom: 2.5vh;
 }
 

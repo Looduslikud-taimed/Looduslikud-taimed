@@ -183,6 +183,12 @@ function sendConfirmationEmail() {
                     + l0(currentdate.getHours()) + ":"  
                     + l0(currentdate.getMinutes())
 
+    if (transportation==null || transportation[0]=="") {
+        if (document.getElementById("self-pickup").checked) {
+            transportation = ["self-pickup",document.getElementById("self-pickup-text").innerHTML.slice(0,-8)]
+        }
+    }
+
     let data = {
         name1:  name1,
         name2: name2,
@@ -196,10 +202,34 @@ function sendConfirmationEmail() {
         transport: [transportation[1],transportationPrice[transportation[0]]],
         language: language
     };
-    console.log(data)
 
     var url = 'https://looduslikud-taimed.000webhostapp.com/order';
     var xhr = createCORSRequest('POST', url);
-    xhr.send(JSON.stringify(data));
-    xhr.onload = () => console.log(xhr.responseText);
+    xhr.onreadystatechange = function() {
+        console.log(xhr.readyState == 4 && xhr.status == 200)
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            var response = JSON.parse(xhr.responseText)
+            console.log(response[0])
+            if (response[0]=="success") {
+                orderReceipt = response[1]
+                localStorage.setItem('orderReceipt',orderReceipt)
+                window.location.replace("../order-done")
+            }
+        }
+        else if (xhr.readyState == 4 && xhr.status != 200) {
+            orderError = response[0]
+            localStorage.setItem('orderError',orderError)
+        }
+	}
+    xhr.send(JSON.stringify(data))
+}
+
+function displayReceipt() {
+    var receipt = localStorage.getItem('orderReceipt')
+    document.getElementById("receipt").innerHTML = receipt
+}
+
+function displayError() {
+    var error = localStorage.getItem('orderError')
+    document.getElementById("error").innerHTML = error
 }
