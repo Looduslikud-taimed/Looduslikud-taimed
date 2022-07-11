@@ -32,7 +32,6 @@ var price = {
     }, 
 }
 
-var language = "RUS"
 var priceTotal = 0
 var order = []
 var orderReceipt = []
@@ -41,9 +40,7 @@ var orderError = []
 var names = {
     GeumRivale: "Geum rivale", 
     AlchemillaVulgaris: "Alchemilla vulgaris",
-    VeronicaChamaedrys: "Veronica chamaedrys", 
-    root: "корень",
-    aerial: "листья"
+    VeronicaChamaedrys: "Veronica chamaedrys"
 }
 
 if (localStorage.getItem('quantity')!=null && localStorage.getItem('quantity')!=undefined) {

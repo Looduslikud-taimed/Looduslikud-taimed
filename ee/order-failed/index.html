@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Эстонские дикоросы на продажу</title>
+    <title>Looduslike taimede müük</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:title" content="Эстонские дикоросы на продажу">
+    <meta property="og:title" content="Looduslike taimede müük">
     <meta property="og:description" content="">
     <meta rpoperty="og:type" content="website">
     <meta property="og:image" content="favicon.ico">
@@ -17,31 +17,32 @@
 
     <!--Load css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="../.css/index.css">
+    <link rel="stylesheet" href="../../.css/index.css">
 
     <!--Load js-->
-    <script src="../.js/init.js"></script> 
-    <script src="../.js/script.js"></script> 
+    <script src="../../.js/init.js"></script> 
+    <script src="../.js/init.js"></script>
+    <script src="../../.js/script.js"></script> 
 </head>
 <body>
     <div id="wrapper">
-
         <div id="navbar">
-            <a href="../about-us">О нас</a>
-            <a href="../goods">Товар</a>
-            <a href="../cart"><b>Корзина</b></a>
+            <a href="../about-us">Meist</a>
+            <a href="../goods">Tooted</a>
+            <a href="../cart"><b>Ostukorv</b></a>
+            <a href="../../ru/order-failed">RUS</a>
         </div>
         <div id="cart">
-            <h1>Заказ удался</h1>
-            <p style="margin:auto; margin-bottom:5vh;">Благодарим за заказ! Счет был отправлен Вам на почту и также виден на этой странице. Отправим Ваш заказ после получения оплаты.</p>
-            <div id = "receipt">
-                <script>displayReceipt()</script>
+            <h1>Tellimus ebaõnnestus</h1>
+            <p style="margin:auto; margin-bottom:5vh;">Midagi läks valesti ja teie tellimust ei saanud töödelda. Saada meile e-kiri <a href = "mailto: a_ill@outlook.com">a_ill@outlook.com</a> ja me selgitame välja.</p>
+            <div id = "error">
+                <script>displayError()</script>
             </div>
         </div>
     <footer>
         <hr id="footer-hr">
         <p id="footer-text">2022 Looduslikud Taimed OÜ</p>
-        <p id="footer-contact">Контакт: <a href = "mailto: a_ill@outlook.com">a_ill@outlook.com</a></p>
+        <p id="footer-contact">Võta meiega ühendust: <a href = "mailto: a_ill@outlook.com">a_ill@outlook.com</a></p>
     </footer>
 </body>
 </html>

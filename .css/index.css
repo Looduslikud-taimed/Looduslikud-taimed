@@ -11,8 +11,8 @@
 #navbar {
     margin: auto;
     display: grid;
-    column-gap: 10vw;
-    grid-template-columns: auto auto auto;
+    column-gap: 5vw;
+    grid-template-columns: auto auto auto auto;
     border-bottom: 0.25vh solid;
     padding-bottom: 2vh;
     justify-content: center;
@@ -76,7 +76,6 @@ button {
     height: 40vh;
 }
 
-
 footer {
     display: flex;
     flex-direction: column;
@@ -89,7 +88,7 @@ footer {
 #footer-hr {
     margin-top: 5vh;
     width: 80vw;
-    border: 0.2vh black solid
+    border: 0.15vh black solid
 }
 
 #footer-text {

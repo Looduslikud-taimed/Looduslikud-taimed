@@ -64,13 +64,29 @@ function updateCart() {
                 p = document.createElement("p")
                 var lastDigit = productsQuantity % 10
                 if (lastDigit ==1) {
-                    var word = "порция"
+                    if (language=="RUS") {
+                        console.log(language,language=="RUS")
+                        var word = "порция"
+                    }
+                    else {
+                        word = "portsjon"
+                    }
                 }
                 else if (lastDigit==2 || lastDigit==3 || lastDigit==4) {
-                    word = "порции"
+                    if (language=="RUS") {
+                        word = "порции"
+                    }
+                    else {
+                        word = "portsjonit"
+                    }
                 }
                 else {
-                    word = "порций"
+                    if (language=="RUS") {
+                        word = "порций"
+                    }
+                    else {
+                        word = "portsjonit"
+                    }
                 }
                 text = document.createTextNode(productsQuantity+" "+word)
                 p.appendChild(text)
